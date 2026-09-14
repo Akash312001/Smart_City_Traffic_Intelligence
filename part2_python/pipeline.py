@@ -116,6 +116,44 @@ def clean_traffic_data(data):
             "Implausible rainfall values imputed using monthly medians."
         )
 
+    # Handle implausible temperature values
+    temperature_outlier_count = (data["temp"] <= 0).sum()
+
+    if temperature_outlier_count > 0:
+        logger.warning(
+            "Found %d implausible temperature values at or below 0 K. "
+            "Replacing with monthly medians.",
+            temperature_outlier_count
+        )
+
+        data.loc[data["temp"] <= 0, "temp"] = np.nan
+
+        data["temp"] = data.groupby("month")["temp"].transform(
+            lambda x: x.fillna(x.median())
+        )
+
+        logger.warning(
+            "Implausible temperature values imputed using monthly medians."
+        )
+
+    # Standardise weather categories
+    weather_columns = [
+        "weather_main",
+        "weather_description"
+    ]
+
+    for column in weather_columns:
+        data[column] = (
+            data[column]
+            .astype("string")
+            .str.strip()
+            .str.lower()
+        )
+
+    logger.info(
+        "Weather categories standardised for weather_main and weather_description."
+    )
+
     # Validate traffic volume
     if (data["traffic_volume"] < 0).any():
         logger.error("Negative traffic volume detected.")
