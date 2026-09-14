@@ -1,0 +1,15 @@
+Smart City Traffic Intelligence - Model Version
+
+Model: Random Forest Classifier
+Version: v1.0
+Task: Proxy high-risk classification
+Training/Test split: 80/20
+Random state: 42
+
+Test Accuracy: 0.985059
+Test Precision: 0.930548
+Test Recall: 0.987418
+Test F1: 0.958140
+Test ROC AUC: 0.998865
+
+The target is a proxy high-risk label derived from congestion and selected severe-weather categories. It is not an accident prediction label.
