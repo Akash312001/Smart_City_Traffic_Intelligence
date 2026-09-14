@@ -319,6 +319,10 @@ def main():
 
     args = parser.parse_args()
 
+    configure_logging(
+    Path(__file__).resolve().parent / "reports" / "logs" / "pipeline.log"
+)
+
     if args.command == "validate":
         data = load_and_validate_data(args.input)
         logger.info(
@@ -353,25 +357,4 @@ def main():
             args.output
         )
 if __name__ == "__main__":
-
-    project_root = Path(__file__).resolve().parent
-
-    input_file = (
-    project_root.parent
-    / "data"
-    / "Metro_Interstate_Traffic_Volume.csv"
-)
-
-    output_dir = project_root / "data" / "processed"
-    output_dir.mkdir(parents=True, exist_ok=True)
-
-    output_file = output_dir / "pipeline_output.csv"
-
-    log_dir = project_root / "reports" / "logs"
-    log_dir.mkdir(parents=True, exist_ok=True)
-
-    log_file = log_dir / "pipeline.log"
-
-    configure_logging(log_file)
-
-    run_pipeline(input_file, output_file)
+    main()
