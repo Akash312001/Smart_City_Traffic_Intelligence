@@ -12,7 +12,6 @@ and traffic timing recommendations.
 - part1_sql/
 - part1_powerbi/
 - part2_python/
-- part3_machine_learning/
 - reports/
 - requirements.txt
 - README.md
