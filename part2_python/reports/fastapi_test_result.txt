@@ -1,0 +1,29 @@
+Smart City Traffic Intelligence API
+FastAPI Deployment Test
+====================================
+
+Endpoint:
+POST /predict
+
+Test input:
+Temperature: 285.0 K
+Rain: 0.0
+Snow: 0.0
+Cloud Cover: 20.0
+Hour: 17
+Day of Week: 2
+Day of Month: 15
+Month: 6
+Weekend: False
+Weather: clear
+
+API Response:
+Prediction: 0
+Risk Level: Normal Risk
+High-Risk Probability: 0.025
+
+Status:
+Successful
+
+The trained Random Forest classification model was successfully
+integrated with the FastAPI prediction endpoint.

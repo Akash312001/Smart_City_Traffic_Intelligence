@@ -1,0 +1,130 @@
+2026-09-12 21:49:43,134 - INFO - __main__ - Pipeline started.
+2026-09-12 21:49:43,134 - INFO - __main__ - Loading dataset: C:\Users\akash\Downloads\Smart_City_Traffic_Intelligence\part2_python\data\Metro_Interstate_Traffic_Volume.csv
+2026-09-12 21:52:07,920 - INFO - __main__ - Pipeline started.
+2026-09-12 21:52:07,920 - INFO - __main__ - Loading dataset: C:\Users\akash\Downloads\Smart_City_Traffic_Intelligence\data\Metro_Interstate_Traffic_Volume.csv
+2026-09-12 21:52:07,970 - INFO - __main__ - Schema validation passed.
+2026-09-12 21:52:07,970 - INFO - __main__ - Dataset loaded successfully. Rows: 48204
+2026-09-12 21:52:07,970 - INFO - __main__ - Starting data cleaning.
+2026-09-12 21:52:07,985 - INFO - __main__ - Datetime conversion completed.
+2026-09-12 21:52:07,989 - INFO - __main__ - Found 48143 missing holiday values.
+2026-09-12 21:52:08,000 - WARNING - __main__ - Found 17 duplicate rows. Removing duplicates.
+2026-09-12 21:52:08,013 - WARNING - __main__ - Found 10 invalid temperature values.
+2026-09-12 21:52:08,021 - INFO - __main__ - Invalid temperatures imputed using monthly medians.
+2026-09-12 21:52:08,025 - INFO - __main__ - Weather categories standardised.
+2026-09-12 21:52:08,026 - INFO - __main__ - Data cleaning completed. Final rows: 48187
+2026-09-12 21:52:08,026 - INFO - __main__ - Starting time feature engineering.
+2026-09-12 21:52:08,048 - INFO - __main__ - Time feature engineering completed.
+2026-09-12 21:52:08,191 - INFO - __main__ - Processed dataset saved to: C:\Users\akash\Downloads\Smart_City_Traffic_Intelligence\part2_python\data\processed\pipeline_output.csv
+2026-09-12 21:52:08,191 - INFO - __main__ - Pipeline completed successfully. Final shape: (48187, 18)
+2026-09-12 22:00:18,099 - INFO - __main__ - Pipeline started.
+2026-09-12 22:00:18,099 - INFO - __main__ - Loading dataset: C:\Users\akash\Downloads\Smart_City_Traffic_Intelligence\data\Metro_Interstate_Traffic_Volume.csv
+2026-09-12 22:00:18,147 - INFO - __main__ - Schema validation passed.
+2026-09-12 22:00:18,147 - INFO - __main__ - Dataset loaded successfully. Rows: 48204
+2026-09-12 22:00:18,147 - INFO - __main__ - Starting data cleaning.
+2026-09-12 22:00:18,162 - INFO - __main__ - Datetime conversion completed.
+2026-09-12 22:00:18,162 - INFO - __main__ - Found 48143 missing holiday values.
+2026-09-12 22:00:18,173 - WARNING - __main__ - Found 17 duplicate rows. Removing duplicates.
+2026-09-12 22:00:18,185 - WARNING - __main__ - Found 10 invalid temperature values.
+2026-09-12 22:00:18,192 - INFO - __main__ - Invalid temperatures imputed using monthly medians.
+2026-09-12 22:00:18,197 - INFO - __main__ - Weather categories standardised.
+2026-09-12 22:00:18,197 - INFO - __main__ - Data cleaning completed. Final rows: 48187
+2026-09-12 22:00:18,197 - INFO - __main__ - Starting time feature engineering.
+2026-09-12 22:00:18,219 - INFO - __main__ - Time feature engineering completed.
+2026-09-12 22:00:18,357 - INFO - __main__ - Processed dataset saved to: C:\Users\akash\Downloads\Smart_City_Traffic_Intelligence\part2_python\data\processed\pipeline_output.csv
+2026-09-12 22:00:18,357 - INFO - __main__ - Pipeline completed successfully. Final shape: (48187, 18)
+2026-09-12 22:00:45,629 - INFO - __main__ - Pipeline started.
+2026-09-12 22:00:45,630 - INFO - __main__ - Loading dataset: C:\Users\akash\Downloads\Smart_City_Traffic_Intelligence\data\Metro_Interstate_Traffic_Volume.csv
+2026-09-12 22:00:45,679 - INFO - __main__ - Schema validation passed.
+2026-09-12 22:00:45,679 - INFO - __main__ - Dataset loaded successfully. Rows: 48204
+2026-09-12 22:00:45,679 - INFO - __main__ - Starting data cleaning.
+2026-09-12 22:00:45,694 - INFO - __main__ - Datetime conversion completed.
+2026-09-12 22:00:45,695 - INFO - __main__ - Found 48143 missing holiday values.
+2026-09-12 22:00:45,705 - WARNING - __main__ - Found 17 duplicate rows. Removing duplicates.
+2026-09-12 22:00:45,718 - WARNING - __main__ - Found 10 invalid temperature values.
+2026-09-12 22:00:45,725 - INFO - __main__ - Invalid temperatures imputed using monthly medians.
+2026-09-12 22:00:45,730 - INFO - __main__ - Weather categories standardised.
+2026-09-12 22:00:45,730 - INFO - __main__ - Data cleaning completed. Final rows: 48187
+2026-09-12 22:00:45,730 - INFO - __main__ - Starting time feature engineering.
+2026-09-12 22:00:45,752 - INFO - __main__ - Time feature engineering completed.
+2026-09-12 22:00:45,903 - INFO - __main__ - Processed dataset saved to: C:\Users\akash\Downloads\Smart_City_Traffic_Intelligence\part2_python\data\processed\pipeline_output.csv
+2026-09-12 22:00:45,903 - INFO - __main__ - Pipeline completed successfully. Final shape: (48187, 18)
+2026-09-12 22:03:49,370 - INFO - __main__ - Loading dataset: ../data/Metro_Interstate_Traffic_Volume.csv
+2026-09-12 22:03:49,436 - INFO - __main__ - Schema validation passed.
+2026-09-12 22:03:49,436 - INFO - __main__ - Dataset loaded successfully. Rows: 48204
+2026-09-12 22:03:49,436 - INFO - __main__ - Validation completed successfully. Rows: 48204
+2026-09-12 22:06:17,431 - INFO - __main__ - Loading dataset: ../data/Metro_Interstate_Traffic_Volume.csv
+2026-09-12 22:06:17,481 - INFO - __main__ - Schema validation passed.
+2026-09-12 22:06:17,481 - INFO - __main__ - Dataset loaded successfully. Rows: 48204
+2026-09-12 22:06:17,481 - INFO - __main__ - Starting data cleaning.
+2026-09-12 22:06:17,496 - INFO - __main__ - Datetime conversion completed.
+2026-09-12 22:06:17,496 - INFO - __main__ - Found 48143 missing holiday values.
+2026-09-12 22:06:17,507 - WARNING - __main__ - Found 17 duplicate rows. Removing duplicates.
+2026-09-12 22:06:17,519 - WARNING - __main__ - Found 10 invalid temperature values.
+2026-09-12 22:06:17,526 - INFO - __main__ - Invalid temperatures imputed using monthly medians.
+2026-09-12 22:06:17,530 - INFO - __main__ - Weather categories standardised.
+2026-09-12 22:06:17,531 - INFO - __main__ - Data cleaning completed. Final rows: 48187
+2026-09-12 22:06:17,629 - INFO - __main__ - Cleaned dataset saved to: data/processed/cli_cleaned_traffic.csv
+2026-09-12 22:07:39,917 - INFO - __main__ - Pipeline started.
+2026-09-12 22:07:39,917 - INFO - __main__ - Loading dataset: ../data/Metro_Interstate_Traffic_Volume.csv
+2026-09-12 22:07:39,987 - INFO - __main__ - Schema validation passed.
+2026-09-12 22:07:39,987 - INFO - __main__ - Dataset loaded successfully. Rows: 48204
+2026-09-12 22:07:39,988 - INFO - __main__ - Starting data cleaning.
+2026-09-12 22:07:40,012 - INFO - __main__ - Datetime conversion completed.
+2026-09-12 22:07:40,013 - INFO - __main__ - Found 48143 missing holiday values.
+2026-09-12 22:07:40,025 - WARNING - __main__ - Found 17 duplicate rows. Removing duplicates.
+2026-09-12 22:07:40,041 - WARNING - __main__ - Found 10 invalid temperature values.
+2026-09-12 22:07:40,051 - INFO - __main__ - Invalid temperatures imputed using monthly medians.
+2026-09-12 22:07:40,055 - INFO - __main__ - Weather categories standardised.
+2026-09-12 22:07:40,056 - INFO - __main__ - Data cleaning completed. Final rows: 48187
+2026-09-12 22:07:40,056 - INFO - __main__ - Starting time feature engineering.
+2026-09-12 22:07:40,080 - INFO - __main__ - Time feature engineering completed.
+2026-09-12 22:07:40,229 - INFO - __main__ - Processed dataset saved to: data/processed/cli_pipeline_output.csv
+2026-09-12 22:07:40,229 - INFO - __main__ - Pipeline completed successfully. Final shape: (48187, 18)
+2026-09-12 22:10:37,144 - INFO - __main__ - Pipeline started.
+2026-09-12 22:10:37,144 - INFO - __main__ - Loading dataset: ../data/Metro_Interstate_Traffic_Volume.csv
+2026-09-12 22:10:37,195 - INFO - __main__ - Schema validation passed.
+2026-09-12 22:10:37,195 - INFO - __main__ - Dataset loaded successfully. Rows: 48204
+2026-09-12 22:10:37,195 - INFO - __main__ - Starting data cleaning.
+2026-09-12 22:10:37,211 - INFO - __main__ - Datetime conversion completed.
+2026-09-12 22:10:37,211 - INFO - __main__ - Found 48143 missing holiday values.
+2026-09-12 22:10:37,225 - WARNING - __main__ - Found 17 duplicate rows. Removing duplicates.
+2026-09-12 22:10:37,239 - WARNING - __main__ - Found 10 invalid temperature values.
+2026-09-12 22:10:37,247 - INFO - __main__ - Invalid temperatures imputed using monthly medians.
+2026-09-12 22:10:37,251 - INFO - __main__ - Weather categories standardised.
+2026-09-12 22:10:37,252 - INFO - __main__ - Data cleaning completed. Final rows: 48187
+2026-09-12 22:10:37,252 - INFO - __main__ - Starting time feature engineering.
+2026-09-12 22:10:37,276 - INFO - __main__ - Time feature engineering completed.
+2026-09-12 22:10:37,429 - INFO - __main__ - Processed dataset saved to: data/processed/cli_pipeline_output.csv
+2026-09-12 22:10:37,429 - INFO - __main__ - Pipeline completed successfully. Final shape: (48187, 18)
+2026-09-12 22:11:36,715 - INFO - __main__ - Pipeline started.
+2026-09-12 22:11:36,715 - INFO - __main__ - Loading dataset: ../data/Metro_Interstate_Traffic_Volume.csv
+2026-09-12 22:11:36,767 - INFO - __main__ - Schema validation passed.
+2026-09-12 22:11:36,767 - INFO - __main__ - Dataset loaded successfully. Rows: 48204
+2026-09-12 22:11:36,767 - INFO - __main__ - Starting data cleaning.
+2026-09-12 22:11:36,783 - INFO - __main__ - Datetime conversion completed.
+2026-09-12 22:11:36,783 - INFO - __main__ - Found 48143 missing holiday values.
+2026-09-12 22:11:36,797 - WARNING - __main__ - Found 17 duplicate rows. Removing duplicates.
+2026-09-12 22:11:36,810 - WARNING - __main__ - Found 10 invalid temperature values.
+2026-09-12 22:11:36,818 - INFO - __main__ - Invalid temperatures imputed using monthly medians.
+2026-09-12 22:11:36,821 - INFO - __main__ - Weather categories standardised.
+2026-09-12 22:11:36,822 - INFO - __main__ - Data cleaning completed. Final rows: 48187
+2026-09-12 22:11:36,822 - INFO - __main__ - Starting time feature engineering.
+2026-09-12 22:11:36,847 - INFO - __main__ - Time feature engineering completed.
+2026-09-12 22:11:37,002 - INFO - __main__ - Processed dataset saved to: data/processed/final_pipeline_output.csv
+2026-09-12 22:11:37,002 - INFO - __main__ - Pipeline completed successfully. Final shape: (48187, 18)
+2026-09-13 14:59:52,427 - INFO - __main__ - Pipeline started.
+2026-09-13 14:59:52,428 - INFO - __main__ - Loading dataset: C:\Users\akash\Downloads\Smart_City_Traffic_Intelligence\data\Metro_Interstate_Traffic_Volume.csv
+2026-09-13 14:59:52,483 - INFO - __main__ - Schema validation passed.
+2026-09-13 14:59:52,483 - INFO - __main__ - Dataset loaded successfully. Rows: 48204
+2026-09-13 14:59:52,483 - INFO - __main__ - Starting data cleaning.
+2026-09-13 14:59:52,499 - INFO - __main__ - Datetime conversion completed.
+2026-09-13 14:59:52,500 - INFO - __main__ - Found 48143 missing holiday values.
+2026-09-13 14:59:52,512 - WARNING - __main__ - Found 17 duplicate rows. Removing duplicates.
+2026-09-13 14:59:52,525 - WARNING - __main__ - Found 10 invalid temperature values.
+2026-09-13 14:59:52,534 - INFO - __main__ - Invalid temperatures imputed using monthly medians.
+2026-09-13 14:59:52,539 - INFO - __main__ - Weather categories standardised.
+2026-09-13 14:59:52,539 - INFO - __main__ - Data cleaning completed. Final rows: 48187
+2026-09-13 14:59:52,539 - INFO - __main__ - Starting time feature engineering.
+2026-09-13 14:59:52,563 - INFO - __main__ - Time feature engineering completed.
+2026-09-13 14:59:52,714 - INFO - __main__ - Processed dataset saved to: C:\Users\akash\Downloads\Smart_City_Traffic_Intelligence\part2_python\data\processed\pipeline_output.csv
+2026-09-13 14:59:52,714 - INFO - __main__ - Pipeline completed successfully. Final shape: (48187, 18)

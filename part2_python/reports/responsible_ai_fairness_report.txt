@@ -1,0 +1,39 @@
+
+Responsible AI and Fairness Analysis
+=====================================
+
+The Random Forest classification model was evaluated separately
+for weekday and weekend observations.
+
+Weekday performance:
+- Accuracy: 98.92%
+- Precision: 95.72%
+- Recall: 99.07%
+- F1 Score: 97.36%
+
+Weekend performance:
+- Accuracy: 97.45%
+- Precision: 81.17%
+- Recall: 97.05%
+- F1 Score: 88.40%
+
+High-risk prediction rate:
+- Weekday: 20.89%
+- Weekend: 11.96%
+
+Key finding:
+Model performance is stronger for weekday observations.
+Weekend precision and F1 score are lower, indicating that
+prediction errors are not evenly distributed across day types.
+
+Limitation:
+The high-risk target is a proxy label created from congestion
+and selected weather conditions. It does not represent actual
+accident outcomes. Therefore, this fairness analysis evaluates
+performance against the proxy target rather than real-world
+accident risk.
+
+Governance consideration:
+The model should not be treated as definitive accident-risk
+evidence. Results should be monitored across day types and
+re-evaluated when new data becomes available.

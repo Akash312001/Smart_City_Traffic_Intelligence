@@ -1,0 +1,52 @@
+2026-09-12 21:44:08,951 - INFO - traffic_pipeline - File logging is now enabled.
+2026-09-12 21:44:08,953 - WARNING - traffic_pipeline - This is a test warning for the log file.
+2026-09-12 21:44:55,205 - INFO - traffic_pipeline - Starting data cleaning.
+2026-09-12 21:44:55,234 - INFO - traffic_pipeline - Datetime conversion completed.
+2026-09-12 21:44:55,237 - INFO - traffic_pipeline - Found 48143 missing holiday values. Filling with 'None'.
+2026-09-12 21:44:55,266 - WARNING - traffic_pipeline - Found 17 duplicate rows. Removing duplicates.
+2026-09-12 21:44:55,296 - WARNING - traffic_pipeline - Found 10 invalid temperature values.
+2026-09-12 21:44:55,317 - INFO - traffic_pipeline - Invalid temperatures imputed using monthly medians.
+2026-09-12 21:44:55,326 - INFO - traffic_pipeline - Weather categories standardised.
+2026-09-12 21:44:55,328 - INFO - traffic_pipeline - Data cleaning completed successfully. Final rows: 48187
+2026-09-12 21:45:31,196 - INFO - traffic_pipeline - Starting time feature engineering.
+2026-09-12 21:45:31,278 - INFO - traffic_pipeline - Time feature engineering completed. Columns added: 8
+2026-09-12 21:46:59,397 - INFO - traffic_pipeline - Pipeline started.
+2026-09-12 21:46:59,510 - INFO - traffic_pipeline - Raw dataset loaded. Rows: 48204
+2026-09-12 21:46:59,511 - INFO - traffic_pipeline - Starting data cleaning.
+2026-09-12 21:46:59,544 - INFO - traffic_pipeline - Datetime conversion completed.
+2026-09-12 21:46:59,546 - INFO - traffic_pipeline - Found 48143 missing holiday values. Filling with 'None'.
+2026-09-12 21:46:59,575 - WARNING - traffic_pipeline - Found 17 duplicate rows. Removing duplicates.
+2026-09-12 21:46:59,626 - WARNING - traffic_pipeline - Found 10 invalid temperature values.
+2026-09-12 21:46:59,652 - INFO - traffic_pipeline - Invalid temperatures imputed using monthly medians.
+2026-09-12 21:46:59,665 - INFO - traffic_pipeline - Weather categories standardised.
+2026-09-12 21:46:59,667 - INFO - traffic_pipeline - Data cleaning completed successfully. Final rows: 48187
+2026-09-12 21:46:59,668 - INFO - traffic_pipeline - Starting time feature engineering.
+2026-09-12 21:46:59,745 - INFO - traffic_pipeline - Time feature engineering completed. Columns added: 8
+2026-09-12 21:46:59,747 - INFO - traffic_pipeline - Pipeline completed successfully. Final shape: (48187, 18)
+2026-09-12 21:47:19,298 - INFO - traffic_pipeline - Processed dataset saved to: C:\Users\akash\Downloads\Smart_City_Traffic_Intelligence\data\processed\processed_traffic.csv
+2026-09-13 14:59:50,365 - INFO - traffic_pipeline - File logging is now enabled.
+2026-09-13 14:59:50,367 - WARNING - traffic_pipeline - This is a test warning for the log file.
+2026-09-13 14:59:50,397 - INFO - traffic_pipeline - Starting data cleaning.
+2026-09-13 14:59:50,435 - INFO - traffic_pipeline - Datetime conversion completed.
+2026-09-13 14:59:50,437 - INFO - traffic_pipeline - Found 48143 missing holiday values. Filling with 'None'.
+2026-09-13 14:59:50,476 - WARNING - traffic_pipeline - Found 17 duplicate rows. Removing duplicates.
+2026-09-13 14:59:50,521 - WARNING - traffic_pipeline - Found 10 invalid temperature values.
+2026-09-13 14:59:50,551 - INFO - traffic_pipeline - Invalid temperatures imputed using monthly medians.
+2026-09-13 14:59:50,564 - INFO - traffic_pipeline - Weather categories standardised.
+2026-09-13 14:59:50,566 - INFO - traffic_pipeline - Data cleaning completed successfully. Final rows: 48187
+2026-09-13 14:59:50,582 - INFO - traffic_pipeline - Starting time feature engineering.
+2026-09-13 14:59:50,661 - INFO - traffic_pipeline - Time feature engineering completed. Columns added: 8
+2026-09-13 14:59:50,683 - INFO - traffic_pipeline - Pipeline started.
+2026-09-13 14:59:50,835 - INFO - traffic_pipeline - Raw dataset loaded. Rows: 48204
+2026-09-13 14:59:50,837 - INFO - traffic_pipeline - Starting data cleaning.
+2026-09-13 14:59:50,884 - INFO - traffic_pipeline - Datetime conversion completed.
+2026-09-13 14:59:50,887 - INFO - traffic_pipeline - Found 48143 missing holiday values. Filling with 'None'.
+2026-09-13 14:59:50,921 - WARNING - traffic_pipeline - Found 17 duplicate rows. Removing duplicates.
+2026-09-13 14:59:50,960 - WARNING - traffic_pipeline - Found 10 invalid temperature values.
+2026-09-13 14:59:50,989 - INFO - traffic_pipeline - Invalid temperatures imputed using monthly medians.
+2026-09-13 14:59:51,001 - INFO - traffic_pipeline - Weather categories standardised.
+2026-09-13 14:59:51,003 - INFO - traffic_pipeline - Data cleaning completed successfully. Final rows: 48187
+2026-09-13 14:59:51,005 - INFO - traffic_pipeline - Starting time feature engineering.
+2026-09-13 14:59:51,084 - INFO - traffic_pipeline - Time feature engineering completed. Columns added: 8
+2026-09-13 14:59:51,086 - INFO - traffic_pipeline - Pipeline completed successfully. Final shape: (48187, 18)
+2026-09-13 14:59:51,609 - INFO - traffic_pipeline - Processed dataset saved to: C:\Users\akash\Downloads\Smart_City_Traffic_Intelligence\data\processed\processed_traffic.csv

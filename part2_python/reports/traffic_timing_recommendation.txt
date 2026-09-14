@@ -1,0 +1,20 @@
+
+Traffic Timing Recommendation
+
+The analysis indicates that traffic volume is generally lowest during
+the early morning hours, particularly around 2 AM to 4 AM on weekdays.
+
+The lowest observed average traffic volume was approximately 302 vehicles
+per hour at 2 AM on weekdays, followed by approximately 362 vehicles per
+hour at 3 AM. At 4 AM on weekdays, average traffic was approximately
+833 vehicles per hour.
+
+The selected early-morning periods also showed a 0% high-risk proxy rate
+in the analysed data. However, the high-risk measure is a proxy based on
+congestion and selected severe-weather categories rather than actual
+accident records.
+
+Therefore, when travel timing is flexible and operationally appropriate,
+early-morning weekday periods may provide lower congestion. The
+recommendation should not be interpreted as a guarantee of road safety,
+and weather and real-world operating conditions should still be considered.

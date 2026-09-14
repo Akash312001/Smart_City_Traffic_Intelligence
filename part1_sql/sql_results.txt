@@ -1,0 +1,98 @@
+SMART CITY TRAFFIC INTELLIGENCE
+PART 1 — SQL RESULTS
+
+1. ANNUAL TRAFFIC TOTALS
+
+2012 = 8,208,767
+2013 = 28,177,412
+2014 = 15,731,289
+2015 = 14,181,206
+2016 = 29,494,821
+2017 = 35,428,156
+
+
+2. TRAFFIC STATISTICS
+
+Mean               = 3259.818355
+Median             = 3380
+Standard deviation = 1986.840061
+Variance           = 3947533.42982987
+Minimum            = 0
+Maximum            = 7280
+Range              = 7280
+
+
+3. TEMPERATURE AND TRAFFIC CORRELATION
+
+Pearson correlation = 0.130298798171127
+
+Interpretation:
+There is a weak positive linear relationship between
+temperature and traffic volume in the dataset.
+
+
+4. PROBABILITY ANALYSIS
+
+Probability of high congestion
+P(High Congestion) = 0.147290681271264
+                   = 14.73%
+
+
+Probability of clear weather
+P(Clear Weather) = 0.277798522944154
+                 = 27.78%
+
+
+Conditional probability
+P(Clear Weather | High Congestion)
+= 0.24830985915493
+= 24.83%
+
+
+Joint probability
+P(High Congestion AND Clear Weather)
+= 0.0365737283213011
+= 3.66%
+
+
+Expected probability if independent
+P(High Congestion) × P(Clear Weather)
+= 0.0409171337005952
+= 4.09%
+
+
+Odds Ratio
+= 0.837372384401101
+≈ 0.84
+
+
+5. HOLIDAY TEMPERATURE ANALYSIS
+
+2015 Labor Day
+Temperature = 295.02 K
+Temperature = 21.87 °C
+Observations = 1
+
+
+2016 Labor Day
+Temperature = 293.17 K
+Temperature = 20.02 °C
+Observations = 2
+
+
+2016 New Years Day
+Temperature = 265.94 K
+Temperature = -7.21 °C
+Observations = 2
+
+
+2017 Labor Day
+Temperature = 295.54 K
+Temperature = 22.39 °C
+Observations = 1
+
+
+2017 New Years Day
+Temperature = 270.62 K
+Temperature = -2.53 °C
+Observations = 1

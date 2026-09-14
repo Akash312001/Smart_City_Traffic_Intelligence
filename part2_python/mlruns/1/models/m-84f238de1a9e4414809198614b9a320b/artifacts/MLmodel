@@ -1,0 +1,23 @@
+artifact_path: file:C:/Users/akash/Downloads/Smart_City_Traffic_Intelligence/part2_python/mlruns/1/models/m-84f238de1a9e4414809198614b9a320b/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.skops
+    predict_fn: predict
+    python_version: 3.14.6
+  sklearn:
+    code: null
+    pickled_model: model.skops
+    serialization_format: skops
+    sklearn_version: 1.9.0
+    skops_trusted_types: null
+mlflow_version: 3.16.0
+model_id: m-84f238de1a9e4414809198614b9a320b
+model_size_bytes: 39532920
+model_uuid: m-84f238de1a9e4414809198614b9a320b
+prompts: null
+run_id: 9e5f142ff498411e954cec8f1c7cee97
+utc_time_created: '2026-09-13 14:57:44.243582'
