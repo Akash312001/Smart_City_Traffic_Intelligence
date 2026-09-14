@@ -39,17 +39,22 @@ def validate_schema(data):
 
 
 def load_and_validate_data(file_path):
-    """Load the raw dataset and validate its schema."""
+    """Load the raw CSV and validate its schema before processing."""
+    try:
+        df = pd.read_csv(file_path)
+    except (FileNotFoundError, pd.errors.EmptyDataError, pd.errors.ParserError) as exc:
+        logger.error("Failed to load input CSV: %s", exc, exc_info=True)
+        raise
 
-    logger.info("Loading dataset: %s", file_path)
+    validate_schema(df)
 
-    data = pd.read_csv(file_path)
+    logger.info(
+        "Loaded raw data successfully: %d rows, %d columns",
+        df.shape[0],
+        df.shape[1],
+    )
 
-    validate_schema(data)
-
-    logger.info("Dataset loaded successfully. Rows: %d", len(data))
-
-    return data
+    return df
 
 
 def clean_traffic_data(data):
@@ -66,6 +71,8 @@ def clean_traffic_data(data):
     )
 
     logger.info("Datetime conversion completed.")
+
+    data["month"] = data["date_time"].dt.month
 
     # Handle missing holiday values
     missing_holiday = data["holiday"].isna().sum()
@@ -89,35 +96,25 @@ def clean_traffic_data(data):
 
         data = data.drop_duplicates().copy()
 
-    # Handle invalid temperature values
-    invalid_temp_count = (data["temp"] == 0).sum()
+    # Handle implausible rainfall values
+    rainfall_outlier_count = (data["rain_1h"] > 9).sum()
 
-    if invalid_temp_count > 0:
+    if rainfall_outlier_count > 0:
         logger.warning(
-            "Found %d invalid temperature values.",
-            invalid_temp_count
+            "Found %d implausible rainfall values above 9 mm. "
+            "Replacing with monthly medians.",
+            rainfall_outlier_count
         )
 
-        data.loc[data["temp"] == 0, "temp"] = np.nan
+        data.loc[data["rain_1h"] > 9, "rain_1h"] = np.nan
 
-        data["month"] = data["date_time"].dt.month
-
-        data["temp"] = data.groupby("month")["temp"].transform(
+        data["rain_1h"] = data.groupby("month")["rain_1h"].transform(
             lambda x: x.fillna(x.median())
         )
 
-        logger.info(
-            "Invalid temperatures imputed using monthly medians."
+        logger.warning(
+            "Implausible rainfall values imputed using monthly medians."
         )
-
-    else:
-        data["month"] = data["date_time"].dt.month
-
-    # Standardise categorical values
-    for column in ["weather_main", "weather_description"]:
-        data[column] = data[column].str.strip().str.lower()
-
-    logger.info("Weather categories standardised.")
 
     # Validate traffic volume
     if (data["traffic_volume"] < 0).any():
@@ -150,6 +147,20 @@ def add_time_features(data):
     data["year"] = data["date_time"].dt.year
     data["hour"] = data["date_time"].dt.hour
     data["day_of_week"] = data["date_time"].dt.dayofweek
+
+    # Cyclical encoding for time features
+    data["hour_sin"] = np.sin(2 * np.pi * data["hour"] / 24)
+    data["hour_cos"] = np.cos(2 * np.pi * data["hour"] / 24)
+
+    data["day_of_week_sin"] = np.sin(
+        2 * np.pi * data["day_of_week"] / 7
+    )
+    data["day_of_week_cos"] = np.cos(
+        2 * np.pi * data["day_of_week"] / 7
+    )
+
+    logger.info("Cyclical time features created.")
+
     data["day_of_month"] = data["date_time"].dt.day
     data["month_name"] = data["date_time"].dt.month_name()
 
@@ -166,9 +177,40 @@ def add_time_features(data):
         .astype(str)
     )
 
-    logger.info(
-        "Time feature engineering completed."
+    # Scaled continuous variables
+    data["temp_scaled"] = (
+        (data["temp"] - data["temp"].mean())
+        / data["temp"].std()
     )
+
+    data["clouds_all_scaled"] = (
+        (data["clouds_all"] - data["clouds_all"].mean())
+        / data["clouds_all"].std()
+    )
+
+    logger.info("Scaled continuous features created.")
+
+    # Data-driven congestion category using traffic-volume quartiles
+    q1 = data["traffic_volume"].quantile(0.25)
+    q2 = data["traffic_volume"].quantile(0.50)
+    q3 = data["traffic_volume"].quantile(0.75)
+
+    data["congestion_category"] = pd.cut(
+        data["traffic_volume"],
+        bins=[-np.inf, q1, q2, q3, np.inf],
+        labels=["Low", "Moderate", "High", "Severe"],
+        include_lowest=True
+    )
+
+    logger.info(
+        "Congestion categories created using traffic-volume quartiles: "
+        "Q1=%.2f, Q2=%.2f, Q3=%.2f",
+        q1,
+        q2,
+        q3
+    )
+
+    logger.info("Time feature engineering completed.")
 
     return data
 
@@ -310,7 +352,7 @@ def main():
             args.input,
             args.output
         )
-\n\nif __name__ == "__main__":
+if __name__ == "__main__":
 
     project_root = Path(__file__).resolve().parent
 
