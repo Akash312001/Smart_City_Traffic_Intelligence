@@ -70,7 +70,7 @@ The pipeline performs:
 Final processed data:
 
 - 48,187 rows
-- 18 columns
+- 25 columns
 - 0 missing values
 - 0 duplicate rows
 
